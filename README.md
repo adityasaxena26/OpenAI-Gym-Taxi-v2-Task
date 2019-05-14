@@ -42,3 +42,36 @@ There are four designated locations in the grid world indicated by R(ed), B(lue)
 state space is represented by:
 
     (taxi_row, taxi_col, passenger_location, destination)
+
+
+    ### Project Instructions
+
+    Clone the repository and navigate to the downloaded folder.
+    ```
+    git clone https://github.com/adityasaxena26/OpenAI-Gym-Taxi-v2-Task.git
+    cd OpenAI-Gym-Taxi-v2-Task
+    ```
+
+    The project contains these files:
+
+    ```agent.py```: Develop your reinforcement learning agent here. This is the only file that you should modify.
+
+    ```monitor.py```: The interact function tests how well your agent learns from interaction with the environment.
+
+    ```main.py```: Run this file in the terminal to check the performance of your agent.
+
+    ```taxi.py```: OpenAI Gym environment implementation from [here](https://github.com/openai/gym/blob/master/gym/envs/toy_text/taxi.py).
+
+    Open all of these files in the terminal.
+
+    run ```main.py``` by executing ```python main.py``` in the terminal.
+
+    When you run ```main.py```, the agent that you specify in ```agent.py``` interacts with the environment for 20,000 episodes. The details of the interaction are specified in ```monitor.py```, which returns two variables: ```avg_rewards``` and ```best_avg_reward.```
+
+    ```avg_rewards``` is a deque where ```avg_rewards[i]``` is the average (undiscounted) return collected by the agent from episodes i+1 to episode i+100, inclusive. So, for instance, ```avg_rewards[0]``` is the average return collected by the agent over the first 100 episodes.
+    ```best_avg_reward``` is the largest entry in ```avg_rewards```. This is the final score that you should use when determining how well your agent performed in the task.
+
+    ### Evaluate your Performance
+    You can modify the ```agents.py``` file to improve the agent's performance.
+
+    OpenAI Gym defines "solving" this task as getting average return of 9.7 over 100 consecutive trials.
